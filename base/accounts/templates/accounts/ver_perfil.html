@@ -1,0 +1,66 @@
+<!----------------------------------------
+    EDITAR_PERFIL
+-->
+
+<!----------------------------------------
+    LOADS
+-->
+{% load static %}
+{% include 'head.html' %}
+{% include 'header.html' %}
+
+
+<!----------------------------------------
+    MAIN
+-->
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="row about-text">
+    <div class="col-12 col-sm-12 fs-2 fw-bolder text-center" style="color: black;">
+        <h1>Perfil de {{ user.username }}</h1>
+    </div>
+</div>
+
+<ul class="col-12 col-sm-12 fs-4 fw-bolder text-center moneda_texto">
+    <div>
+        <p><strong>Nombre:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+    
+        <div>
+            <strong>Foto:</strong>
+            {% if user.datoextra.avatar %}
+                <img src="{{ user.datoextra.avatar.url }}" alt="Avatar" height="100">
+            {% else %}
+                <img src="{% static 'media/accounts/avatar_base.png' %}" alt="Avatar" height="100">
+            {% endif %}
+        </div>
+    </div>
+</ul>
+
+<br>
+
+<div class="row about-text">
+    <div class="col-12 col-sm-12 fs-4 fw-bolder text-center moneda_texto" style="color: black;">
+        <a href={% url 'editar_perfil' %}>Editar Perfil</a>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!----------------------------------------
+    INCLUDE FOOTER
+-->
+
+{% include 'footer.html' %}
+    

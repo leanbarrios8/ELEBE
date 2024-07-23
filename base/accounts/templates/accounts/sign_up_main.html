@@ -1,0 +1,42 @@
+<!----------------------------------------
+    SIGN_UP_MAIN
+-->
+
+<!----------------------------------------
+    LOADS
+-->
+
+{% load static %}
+
+<!----------------------------------------
+    MAIN
+-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="row about-text">
+    <div class="col-12 col-sm-12 fs-4 fw-bolder text-center moneda_texto" style="color: black;">
+        <form action={% url "sign_up" %} method="POST">
+            {% csrf_token %}
+            {{formulario_reg}}
+            <br>
+            <div class="button-container earn_crear_moneda">
+                <a>
+                    <input type="submit" name="registrarse" value="Registrarse" class="btn fw-bolder" style="color:#67AEDB;">
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>

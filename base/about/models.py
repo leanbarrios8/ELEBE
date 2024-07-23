@@ -1,3 +1,11 @@
 from django.db import models
 
-# Create your models here.
+class Estudios(models.Model):
+    lenguaje = models.CharField(max_length=20)
+    duracion = models.CharField(max_length=20)
+    nota = models.CharField(max_length=20)
+    
+    def __str__(self):
+        return f'{self.lenguaje} {self.nota}'
+    
+    

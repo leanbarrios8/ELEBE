@@ -1,0 +1,68 @@
+<!----------------------------------------
+    BASE
+-->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!----------------------------------------
+    HEAD
+
+    
+-->
+
+
+{% include 'head.html' %}
+
+
+<!----------------------------------------
+    HEADER
+-->
+{% include 'header.html' %}
+
+
+<!----------------------------------------
+    MAIN
+-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="col-12 col-sm-12 fs-4 fw-bolder text-center moneda_texto" style="color: black;">
+    <form action={% url "editar_monedas" monedas.id %} method="POST">
+        {% csrf_token %}
+    
+        {{form}}
+    
+        <input class="earn_crear_moneda_agregar" style="color:#67AEDB;"  type="submit" value="Actualizar">
+    
+    </form>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!----------------------------------------
+    FOOTER
+-->
+
+
+{% include 'footer.html' %}

@@ -1,0 +1,62 @@
+<!----------------------------------------
+    BASE
+-->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!----------------------------------------
+    HEAD
+
+    
+-->
+
+
+{% include 'head.html' %}
+
+
+<!----------------------------------------
+    HEADER
+-->
+{% include 'header.html' %}
+
+
+<!----------------------------------------
+    MAIN
+-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <ul class="col-12 col-sm-12 fs-4 fw-bolder text-center moneda_texto">
+        <li>Nombre: {{ monedas.nombre }}</li> 
+        <br>
+        <li>Valor: {{ monedas.valor }}</li> 
+        <br>
+        <li>Fecha: {{ monedas.fecha }}</li> 
+        <br>
+        <li><p><img src="{{ object.imagen.url }}" alt="{{ object.nombre }}" width="300" height="300"></p></li> 
+    </ul>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!----------------------------------------
+    FOOTER
+-->
+
+
+{% include 'footer.html' %}

@@ -1,10 +1,25 @@
-{% extends "base.html" %}
+<!----------------------------------------
+    ABOUT
+-->
 
-{% block title_head %}
-    About Me
-{% endblock title_head %}
-    
+<!----------------------------------------
+    LOADS - INCLUDE
+-->
 
-{% block h1_header %}
-ACA EL ABOUT
-{% endblock h1_header %}
+{% load static %}
+
+{% include 'head.html' %}
+{% include 'header.html' %}
+
+
+<!----------------------------------------
+    MAIN
+-->
+
+{% include 'about/about_main.html' %}
+
+<!----------------------------------------
+    INCLUDE FOOTER
+-->
+
+{% include 'footer.html' %}

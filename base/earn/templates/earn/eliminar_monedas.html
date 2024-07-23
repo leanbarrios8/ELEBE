@@ -1,0 +1,66 @@
+<!----------------------------------------
+    BASE
+-->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!----------------------------------------
+    HEAD
+
+    
+-->
+
+
+{% include 'head.html' %}
+
+
+<!----------------------------------------
+    HEADER
+-->
+{% include 'header.html' %}
+
+
+<!----------------------------------------
+    MAIN
+-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form action={% url "eliminar_monedas" monedas.pk %} method="POST">
+    {% csrf_token %}
+    <p class="col-12 col-sm-12 fs-4 fw-bolder text-center moneda_texto">
+        Desea confirmar el borrado de la moneda {{object}}??
+    </p>
+    <input class="earn_eliminar_moneda" type="submit" value="Confirmar borrado">
+
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!----------------------------------------
+    FOOTER
+-->
+
+
+{% include 'footer.html' %}

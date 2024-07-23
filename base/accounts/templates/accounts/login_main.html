@@ -1,0 +1,60 @@
+<!----------------------------------------
+    LOGIN_MAIN
+-->
+
+<!----------------------------------------
+    LOADS
+-->
+
+{% load static %}
+
+<!----------------------------------------
+    MAIN
+-->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="row about-text">
+    <div class="col-12 col-sm-12 fs-4 fw-bolder text-center moneda_texto" style="color: black;">
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            {{ formulario_log.as_p }}
+            <br>
+            <div class="button-container earn_crear_moneda">
+                <a>
+                    <input type="submit" name="login" value="Iniciar Sesion" class="btn fw-bolder" style="color:#67AEDB;">
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+
+<div class="container-fluid accounts_r" style="background-color: black;">
+    <div class="row">
+        <div class="col-xs-12 fs-2 fw-bolder text-center" style="color:#67AEDB;">
+            <p>
+                Todavia no estas registrado?
+            </p>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<div class="button-container accounts_r_boton">
+    <a href={% url 'sign_up' %} class="btn fw-bolder" style="color:white;">
+        Registrarse
+    </a>
+</div>
+
+
+<br>
+<br>
+<br>

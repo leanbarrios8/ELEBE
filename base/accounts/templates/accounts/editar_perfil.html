@@ -1,0 +1,46 @@
+<!----------------------------------------
+    EDITAR_PERFIL
+-->
+
+<!----------------------------------------
+    LOADS
+-->
+{% load static %}
+{% include 'head.html' %}
+{% include 'header.html' %}
+
+
+<!----------------------------------------
+    MAIN
+-->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="col-12 col-sm-12 fs-4 fw-bolder text-center moneda_texto" style="color: black;">
+    <form action={% url "editar_perfil" %} method="POST" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{formulario_edit}}
+        <input type="submit" value="Guardar Cambios">
+    </form>
+    <br>
+    <a href={% url "cambiar_contra" %}>Cambiar Contraseña</a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!----------------------------------------
+    INCLUDE FOOTER
+-->
+
+{% include 'footer.html' %}
+    

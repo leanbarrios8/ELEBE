@@ -4,4 +4,5 @@ from django.shortcuts import render
 def inicio(request):
     return render(request, 'inicio/index.html')
 
-# Create your views here.
+def blex(request):
+    return render(request, 'inicio/Staking.html')

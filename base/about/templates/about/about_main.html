@@ -1,0 +1,89 @@
+<!----------------------------------------
+    ABOUT_MAIN
+-->
+
+<!----------------------------------------
+    LOADS
+-->
+
+{% load static %}
+
+<!----------------------------------------
+    MAIN
+-->
+
+
+<div class="container-fluid quien" style="background-color: black;">
+    <div class="row">
+        <div class="col-12 fs-2 fw-bolder text-center" style="color:#67AEDB;">
+            <p>
+                Quien soy?
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="background-color: black;">
+    <div class="container quien_soy" >
+        <div class="row inicio-row">
+            <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 quien_soy-text">
+                <div class="row">
+                    <div class="col fs-2 fw-bold quien_soy1" style="color: white;">
+                        <p>Lean</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col fs-5 quien_soy2" style="color: aliceblue;">
+                        <p>👋 Hola! Voy a guiarte por un muy breve resumen de quien soy. Desde temprana edad tenia curiosidad por la computación, al punto de dedicar horas hasta el día sin darme cuenta. Con el tiempo se volvió una pasión por la tecnología, desarrollando habilidades que me llevaron en mi actual camino.
+                            Durante la secundaria fui a una institución con orientación en la informática, ahí puse a prueba mis conocimientos llegando a la conclusión que ya era parte de mi vida. Todo lo que incluyera una innovación o equipamiento informático me gustaba, recuerdo siempre pasar frente a la "Sala Técnica" y sentirme asombrado, mirando entre rendijas como en una juguetería.
+                            Al salir de la secundaria busque mi rumbo y continuar los estudios, pero debido a distintas circunstancias decidí trabajar. Hoy un par de años después, la vida sin buscarlo me re encamino a una excelente empresa, dedicada a la venta de insumos informáticos. Sintiendo que ya complete una etapa, decidí volver a emprender ese camino de aprendizaje, tan difícil y satisfactorio al mismo tiempo. Un desafío personal y una búsqueda de crecimiento constante, para dedicarme completamente a eso que tanto me apasiona.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-0 col-sm-0 col-0 quien_soy-img">
+                <img src={% static "assets/img/yo.jpeg" %} alt="" width="320" class="img-fluid btc-img">
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
+
+<div class="contact3">
+    <h1>Te quedaron dudas?</h1>
+</div>
+
+<div class="container contact4" style="background-color: black;">
+    <div class="contact4-logo text-center">
+        <img src={% static "assets/logo/Logo-Blex.png" %} alt="" width="150" class="img-fluid">
+    </div>
+    <form class="contact4-form">
+        <p class="col-12 fs-2 fw-bolder text-center contact4-text" style="color:#67AEDB;">Dejanos tu mensaje</p>
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <input type="text" name="txtName" class="form-control" placeholder="Nombre *" value="">
+                </div>
+                <div>
+                    <input type="text" name="txtEmail" class="form-control" placeholder="Email *" value="">
+                </div>
+                <div>
+                    <input type="text" name="txtPhone" class="form-control" placeholder="Telefono *" value="">
+                </div>
+                <div>
+                    <input type="text" name="txtPhone" class="form-control" placeholder="Pais *" value="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <textarea name="txtMsg" class="form-control" placeholder="Tu mensaje" style="width: 100%; height: 120px;"></textarea>
+                </div>
+                <div>
+                    <input type="submit" name="btnSubmit" class="contact4-boton" value="Enviar" style="background-color: #67AEDB; width: 100%;;">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<br><br>

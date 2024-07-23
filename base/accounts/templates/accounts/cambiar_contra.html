@@ -1,0 +1,41 @@
+<!----------------------------------------
+    CAMBIAR_CONTRA
+-->
+
+<!----------------------------------------
+    LOADS
+-->
+
+{% load static %}
+{% include 'head.html' %}
+{% include 'header.html' %}
+
+
+<!----------------------------------------
+    MAIN
+-->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<form action={% url "cambiar_contra" %} method="POST">
+    {% csrf_token %}
+
+    {{form}}
+
+    <input type="submit" value="Cambiar">
+
+</form>
+
+<!----------------------------------------
+    INCLUDE FOOTER
+-->
+
+{% include 'footer.html' %}
+    
