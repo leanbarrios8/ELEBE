@@ -34,7 +34,7 @@
                     {% csrf_token %}
                     <input type="submit" class="nav-logout nav-link active fs-5 fw-bold" value="LOGOUT" style="color: white;" >
                 </form>
-                    <a class="navbar-brand-avatar" href={% url "ver_perfil" %}> <img src={% if request.user.datoextra.avatar %}{{ request.user.datoextra.avatar.url }}{% else %}{{ MEDIA_URL }}media/accounts/avatar_base.png{% endif %} alt="Avatar" height="40px" width="40px">
+                    <a class="navbar-brand-avatar" href={% url "ver_perfil" %}> <img src={% if request.user.datoextra.avatar %}{{ request.user.datoextra.avatar.url }}{% else %}{% static 'assets/users/avatar_base.png' %}{% endif %} alt="Avatar" height="40px" width="40px">
                 {% else %}
                 <form action={% url "login" %} method="POST">
                     {% csrf_token %}
@@ -86,7 +86,7 @@
                     {% csrf_token %}
                     <input type="submit" class="nav-logout nav-link active fs-5 fw-bold" value="LOGOUT" style="color: white;" >
                 </form>
-                    <a class="navbar-brand-avatar" href={% url "ver_perfil" %}> <img src={% if request.user.datoextra.avatar %}{{ request.user.datoextra.avatar.url }}{% else %}{{ MEDIA_URL }}media/accounts/avatar_base.png{% endif %} alt="Avatar" height="40px" width="40px">
+                    <a class="navbar-brand-avatar" href={% url "ver_perfil" %}> <img src={% if request.user.datoextra.avatar %}{{ request.user.datoextra.avatar.url }}{% else %}{% static 'assets/users/avatar_base.png' %}{% endif %} alt="Avatar" height="40px" width="40px">
                 {% else %}
                 <form action={% url "login" %} method="POST">
                     {% csrf_token %}

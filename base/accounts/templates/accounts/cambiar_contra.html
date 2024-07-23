@@ -22,16 +22,30 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
 
 
-<form action={% url "cambiar_contra" %} method="POST">
-    {% csrf_token %}
+<div class="col-12 col-sm-12 fs-4 fw-bolder text-center moneda_texto" style="color: black;">
+    <form action={% url "cambiar_contra" %} method="POST">
+        {% csrf_token %}
+    
+        {{form}}
+        <br>
+        <input type="submit" class="earn-buscar nav-link active fs-5 fw-bold" value="Cambiar" style="color: #67AEDB" >
+    </form>
+</div>
 
-    {{form}}
-
-    <input type="submit" value="Cambiar">
-
-</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <!----------------------------------------
     INCLUDE FOOTER

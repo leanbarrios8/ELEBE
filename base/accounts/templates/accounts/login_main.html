@@ -19,6 +19,14 @@
 <br>
 <br>
 
+{% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
 <div class="row about-text">
     <div class="col-12 col-sm-12 fs-4 fw-bolder text-center moneda_texto" style="color: black;">
         <form action="{% url 'login' %}" method="POST">

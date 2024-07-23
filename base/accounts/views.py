@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login as django_login
+from django.contrib import messages
 from django.urls import reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import PasswordChangeView
-from .forms import MiFormulario, EditarPerfil
+from .forms import MiFormularioReg, EditarPerfil, MiFormularioCambiarPass
 from .models import DatoExtra
 
 def login(request):
@@ -17,20 +18,22 @@ def login(request):
             contrasenia = formulario_log.cleaned_data.get('password')
             
             user = authenticate(request, username=usuario, password=contrasenia)
-    
-            django_login(request, user)
             
-            return redirect('inicio')
-        
+            if user is not None:
+                django_login(request, user)
+                return redirect('inicio')
+            else:
+                messages.error(request, 'Usuario no existe. Por favor, regístrese.')
+    
     return render(request, 'accounts/login.html', {'formulario_log':formulario_log})
 
 
 def registro(request):
     
-    formulario_reg = MiFormulario()
+    formulario_reg = MiFormularioReg()
     
     if request.method == "POST":
-        formulario_reg = MiFormulario(request.POST)
+        formulario_reg = MiFormularioReg(request.POST)
         if formulario_reg.is_valid():
             formulario_reg.save()
             return redirect('login')
@@ -63,5 +66,6 @@ def editar_perfil(request):
 
 
 class CambiarPassword(LoginRequiredMixin, PasswordChangeView):
+    form_class = MiFormularioCambiarPass
+    success_url = reverse_lazy('login')
     template_name = 'accounts/cambiar_contra.html'
-    success_url = reverse_lazy('editar_perfil')

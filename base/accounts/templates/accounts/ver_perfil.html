@@ -37,8 +37,8 @@
             <strong>Foto:</strong>
             {% if user.datoextra.avatar %}
                 <img src="{{ user.datoextra.avatar.url }}" alt="Avatar" height="100">
-            {% else %}
-                <img src="{% static 'media/accounts/avatar_base.png' %}" alt="Avatar" height="100">
+                {% else %}
+                <img src="{% static 'assets/users/avatar_base.png' %}" alt="Avatar" height="100">
             {% endif %}
         </div>
     </div>
